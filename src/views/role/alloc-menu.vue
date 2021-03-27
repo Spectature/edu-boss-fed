@@ -6,6 +6,7 @@
         node-key="id"
         :data="menus"
         :props="defaultProps"
+        :default-checked-keys="checkedKeys"
         show-checkbox
         default-expand-all
       ></el-tree>
@@ -64,7 +65,7 @@ export default {
         // this.checkedKeys.push(menu.id)
         this.checkedKeys = [...this.checkedKeys, menu.id]
       })
-      this.$refs['menu-tree'].setCheckedKeys(this.checkedKeys)
+      // this.$refs['menu-tree'].setCheckedKeys(this.checkedKeys)
     },
     async loadRoleMenus () {
       const { data } = await getRoleMenus(this.roleId)

@@ -1,10 +1,17 @@
 <template>
-  <div class="user">广告管理</div>
+  <div class="user">
+    <user-list></user-list>
+  </div>
 </template>
 
 <script>
+import UserList from './components/List'
+
 export default {
-  name: 'UserIndex'
+  name: 'UserIndex',
+  components: {
+    UserList
+  }
 }
 </script>
 
